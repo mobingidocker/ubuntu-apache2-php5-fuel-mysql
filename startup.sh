@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pushd /var/ymr
-	php composer.phar config github-oauth.github.com 6bb28c05f98e11fd6601f8f7fe3d6cf3df78bafc
+	php composer.phar config github-oauth.github.com `openssl aes-256-cbc -d -in token.enc -pass file:passphrase`
 	php composer.phar update
 	FUEL_ENV=production php oil refine migrate
 
