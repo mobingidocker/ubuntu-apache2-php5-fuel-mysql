@@ -35,6 +35,9 @@ COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY config /config
 COPY sudoers /etc/sudoers
 
+COPY token.enc /token.enc
+COPY passphrase /passphrase
+
 ENV FUEL_ENV production
 
 EXPOSE 22 80
