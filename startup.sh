@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pushd /var/www/html
+pushd /var/ymr
 	php composer.phar config github-oauth.github.com e318808116a128677a3d867c2df32b0b95e93d0f
 	php composer.phar update
 	FUEL_ENV=production php oil refine migrate
@@ -15,7 +15,7 @@ pushd /var/www/html
 	popd
 
 	mkdir -p /var/log/fuel
-	ln -s /var/log/fuel/ /var/www/html/fuel/app/logs
+	ln -s /var/log/fuel/ /var/ymr/fuel/app/logs
 
 popd
 
