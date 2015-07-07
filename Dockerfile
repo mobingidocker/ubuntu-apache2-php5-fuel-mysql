@@ -17,7 +17,7 @@ RUN curl -sS https://getcomposer.org/installer | php
 RUN curl get.fuelphp.com/oil | sh
 
 RUN apt-get install -y phpMyAdmin
-RUN echo "Include /etc/phpmyadmin/apache2.conf" >> /etc/apache2/apache2.conf
+RUN echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
 
 COPY config-db.php /etc/phpmyadmin/config-db.php 
 COPY config.inc.php /etc/phpmyadmin/config.inc.php
