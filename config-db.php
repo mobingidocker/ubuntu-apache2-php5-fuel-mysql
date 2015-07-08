@@ -10,8 +10,8 @@
 ## you'll probably also want to edit the configuration file mentioned
 ## above too.
 ##
-$dbuser='phpmyadmin';
-$dbpass='ABw8QFYngvPU';
+$dbuser=getenv("MOCLOUD_DATABASE_USERNAME");
+$dbpass=getenv("MOCLOUD_DATABASE_PASSWORD");
 $basepath='';
 $dbname=getenv("MOCLOUD_DATABASE_NAME");
 $dbserver=getenv("MOCLOUD_DATABASE_ADDRESS");
